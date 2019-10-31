@@ -17,4 +17,13 @@ s e i
 o t n
 m h g
 
-omthng
+s o m e
+t h i n
+g s
+
+
+
+
+
+s t g o
+h s e n
