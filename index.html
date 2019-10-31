@@ -12,12 +12,15 @@
   <div class="container">
 
     <form id="english">
-      <label for="enterLine">Enter a word:</label>
-      <input type="text" id="enterLine" value="">
-      <button type="submit" name="button">Get Encrypted message</button>
+      <label for="enterLine">Enter a word or sentence:</label>
+      <input type="text" id="enterLine" class="form-control" placeholder="Enter Something Here"><br>
+      <button type="submit" name="button" class="btn btn-success">Get Encrypted message</button>
     </form>
-    <div>
-      <p id="results">Here are your results: <br></p>
+    <div class="card card-success translated">
+      <div class="card-header">
+        <h2>Here are your Results:</h2>
+      </div>
+      <p id="results"></p>
     </div>
   </div>
 </body>

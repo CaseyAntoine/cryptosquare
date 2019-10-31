@@ -50,7 +50,8 @@ $(document).ready(function() {
 
     var message = $("#enterLine").val().split("");
     var result = encrypt(message);
-    $("#results").append(result);
+    $(".translated").show();
+    $("#results").text(result);
 
   });
 });
