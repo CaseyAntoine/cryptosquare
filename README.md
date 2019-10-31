@@ -12,7 +12,9 @@ de
 4. print new array with 0 index 2 of example
 cd oe
 
-something
+s o m e t h i n
+0 1 2 3 4 5 6 7
+
 s e i
 o t n
 m h g

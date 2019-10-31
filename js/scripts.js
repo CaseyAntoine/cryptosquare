@@ -9,41 +9,41 @@ function rowsColumns(number) {
   } else {
     return sqrt;
   }
-
 }
-// add spaces to array until array.length = square of rows/columns
 
 function encrypt(word) {
   var encrypted = [];
+  var alphabet = ("abcdefghijklmnopqrstuvwxyz").split("");
+
+  for (k = word.length; k >= 0; k--) {
+    if (!alphabet.includes(word[k])) {
+      word.splice(k, 1);
+      console.log(word);
+    }
+  }
+
   var rowColumn = rowsColumns(word.length);
 
-  console.log(rowColumn);
-
   for (j = 0; j < rowColumn; j++) {
-
     for (i = 0; i < word.length; i++) {
-
       if (i % rowColumn === 0) {
         encrypted.push(word[i]);
-        console.log(word);
       }
-
     }
     word.shift();
   }
+
+  for (i = 0; i < encrypted.length; i++) {
+    if (i % 6 === 0) {
+      encrypted.splice(i, 0, " ");
+    }
+  }
+
   return (encrypted.join(""));
-
-
 }
-
-
 
 // User Logic
 $(document).ready(function() {
-
-
-
-
 
   $('#english').submit(function(ev) {
     ev.preventDefault();
@@ -52,11 +52,5 @@ $(document).ready(function() {
     var result = encrypt(message);
     $("#results").append(result);
 
-    console.log(message);
-
-
   });
-
-
-
 });
